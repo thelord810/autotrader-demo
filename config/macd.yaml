@@ -10,7 +10,7 @@ PARAMETERS:
   MACD_fast: 12
   MACD_slow: 26
   MACD_smoothing: 9
-  
+
   # Exit level parameters
   RR: 1.5
 

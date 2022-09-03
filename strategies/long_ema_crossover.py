@@ -6,8 +6,15 @@ from autotrader.indicators import crossover
 class LongEMAcrossOver:
     """EMA Crossover example strategy."""
     
+<<<<<<< Updated upstream
     def __init__(self, parameters, data, instrument, broker, **kwargs):
         """Define all indicators used in the strategy."""
+=======
+    '''
+    
+    def __init__(self, parameters, data, instrument):
+        ''' Define all indicators used in the strategy '''
+>>>>>>> Stashed changes
         self.name   = "Strategy name"
         self.data   = data
         self.params = parameters
@@ -29,6 +36,7 @@ class LongEMAcrossOver:
                                         'data': self.slow_ema}
                             }
         
+<<<<<<< Updated upstream
     def generate_signal(self, i):
         """Define strategy to determine entry signals."""
         orders = []
@@ -36,6 +44,13 @@ class LongEMAcrossOver:
         # Get current position
         current_position = self.broker.get_positions(self.instrument)
         
+=======
+    def generate_signal(self, i, current_position=""):
+        ''' Define strategy to determine entry signals '''
+        order_type      = 'market'
+        related_orders  = None
+        signal_dict     = {}
+>>>>>>> Stashed changes
         # Put entry strategy here
         signal = 0
         if len(current_position) == 0:

@@ -1,19 +1,18 @@
-NAME: 'EMA Crossover'
-MODULE: 'long_ema_crossover'
-CLASS: 'LongEMAcrossOver'
+NAME: 'HK Crossover'
+MODULE: 'HK_ema_crossover'
+CLASS: 'HKEMAcrossOver'
 INTERVAL: '1day'
 PERIOD: 1
 RISK_PC: 90
 SIZING: 'risk'
-INCLUDE_BROKER: True
 PARAMETERS:
-  slow_ema: 13
-  fast_ema: 34
+  ema: 9
+  candle_lookback: 1 # look back over this many candles
   RR: 1
   exchange: 'NFO'
   product: 'futures'
   expiry: "2021-12-30T07:00:00.000Z"
-  option_type: ""
+  option_type: "others"
   strike: ""
   start_time: "2021-10-01T07:00:00.000Z"
   end_time: "2021-12-23T07:00:00.000Z"

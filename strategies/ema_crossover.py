@@ -20,7 +20,7 @@ class EMAcrossOver:
         self.crossovers = crossover(self.fast_ema, self.slow_ema)
         
         # ATR for stops
-        self.atr = TA.ATR(data, 14)
+        #self.atr = TA.ATR(data, 14)
         
         # Construct indicators dict for plotting
         self.indicators = {'Fast EMA': {'type': 'MA',

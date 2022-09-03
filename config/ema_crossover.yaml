@@ -1,14 +1,21 @@
 NAME: 'EMA Crossover'
 MODULE: 'ema_crossover'
 CLASS: 'EMAcrossOver'
-INTERVAL: '1h'
-PERIOD: 300
+INTERVAL: '1day'
+PERIOD: 55
 RISK_PC: 2
 SIZING: 'risk'
 PARAMETERS:
-  slow_ema: 50
-  fast_ema: 21
+  slow_ema: 34
+  fast_ema: 13
   RR: 2.0
+  exchange: 'NFO'
+  product: 'futures'
+  expiry: "2021-12-30T07:00:00.000Z"
+  option_type: ""
+  strike: ""
+  start_time: "2021-10-01T07:00:00.000Z"
+  end_time: "2021-12-23T07:00:00.000Z"
 
 # Define pairs to monitor
-WATCHLIST: ['AUDJPY=X']
+WATCHLIST: ['NIFTY']

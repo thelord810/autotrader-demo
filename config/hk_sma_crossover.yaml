@@ -1,14 +1,13 @@
-NAME: 'EMA Crossover'
-MODULE: 'long_ema_crossover'
-CLASS: 'LongEMAcrossOver'
+NAME: 'HK Crossover'
+MODULE: 'HK_sma_crossover'
+CLASS: 'HKSMAcrossOver'
 INTERVAL: '1day'
 PERIOD: 1
 RISK_PC: 90
 SIZING: 'risk'
-INCLUDE_BROKER: True
 PARAMETERS:
-  slow_ema: 13
-  fast_ema: 34
+  sma: 9
+  candle_lookback: 1 # look back over this many candles
   RR: 1
   exchange: 'NFO'
   product: 'futures'

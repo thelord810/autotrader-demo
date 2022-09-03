@@ -30,7 +30,11 @@ class SMAMomentum:
                                    'data': self.sma},
                             }
         
+<<<<<<< Updated upstream
     def generate_signal(self, i):
+=======
+    def generate_signal(self, i, current_position=""):
+>>>>>>> Stashed changes
         ''' Define strategy to determine entry signals '''
         signal_dict = {}
         RR = self.params['RR']
