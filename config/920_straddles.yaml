@@ -1,0 +1,23 @@
+NAME: '920 Straddles'
+MODULE: '920_straddles'
+CLASS: 'Straddles_920'
+INTERVAL: '1minute'
+PERIOD: 1
+RISK_PC: 1
+SIZING: 'risk'
+PARAMETERS:
+  candle_lookback: 10 # look back over this many candles
+  RR: 4.0 # risk-to-reward ratio
+  exit_buffer: 0.2 # price units
+  exchange: 'NFO'
+  product: 'options'
+  expiry: 'Weekly'
+  contract: 'current'
+  option_type: "both"
+  strike: "ATM"
+# Define pairs to monitor
+WATCHLIST: ['NIFTY']
+TRADE_INSTRUMENT: ATM
+BACKTEST:
+  start_time: ""
+  end_time: ""

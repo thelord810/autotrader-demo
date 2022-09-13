@@ -9,7 +9,7 @@ keys_config = {
     }
 }
 # Create a new instance of AutoTrader
-at.configure(show_plot=True, verbosity=1, broker= "kotak", feed='common', mode='continuous', allow_dancing_bears=True, global_config=keys_config)#Configure the instance
+at.configure(show_plot=True, verbosity=1, broker= "kotak", feed='common', mode='continuous', allow_dancing_bears=True, global_config=keys_config, update_interval='1S', req_liveprice=True)#Configure the instance
 # at.add_strategy('hk_ema_crossover')                     # Add the strategy by its configuration file prefix
 # at.backtest(start = '1/10/2021',             # Define the backtest settings
 #             end = '23/12/2021',
@@ -17,7 +17,7 @@ at.configure(show_plot=True, verbosity=1, broker= "kotak", feed='common', mode='
 #             leverage = 30)
 
 # at.configure(show_plot=True, verbosity=1)   # Configure the instance
-at.add_strategy('sma_momentum')                     # Add the strategy by its configuration file prefix
+at.add_strategy('920_straddles')                     # Add the strategy by its configuration file prefix
 #at.backtest(start = '1/1/2021',             # Define the backtest settings
 #            end = '1/1/2022')
 at.run()
