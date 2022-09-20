@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 import logging
 from autotrader_custom_repo.AutoTrader.autotrader import options
+from autotrader_custom_repo.AutoTrader.autotrader.brokers import trading
 
 class Straddles_920:
     ''' 
@@ -20,7 +21,11 @@ class Straddles_920:
         logging.info(f"ATM Strike is {atm_strike}")
 
         #Set Instruments based on ATM Strike
-        self.trade_instrument = {"CE": atm_strike, "PE": atm_strike}
+        if (self.params['option_type'] == "both"):
+            instrument_list = [{"strike": atm_strike, "option_type": "CE"}, {"strike": atm_strike, "option_type": "PE"}]
+            self.symbol = trading.Symbol(instrument_list,self.params)
+
+        self.trade_instrument = self.symbol.get_token()
 
         
     def generate_signal(self, data):
