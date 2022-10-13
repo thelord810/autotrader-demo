@@ -1,0 +1,18 @@
+Bank Nifty Strangle Algo:
+
+Entry Conditions:
+	Strike Selection 
+	1. Strike price should be ~100 Rs
+	2. Strike price must be beyond 1 SD
+	3. Trading day should be Friday or Monday
+	4. If any of the above condtion is not met then choose next week strikes which are ~100 Rs
+
+Repair Condition:
+	1. if call price < (put price / 2) then square off call and sell new call ~100 Rs adhearing to entry condition rules
+	2. if put price < (call price / 2) then square off put and sell new put ~100 Rs adhearing to entry condition rules
+	The above repair conditions should execute maximum 2 times for each direction. Beyond that the trade must close regardless of profit or loss.
+	
+Universal Exit:
+	1. if total loss per lot is > 500 Rs 
+	2. if total profit per lot is > 1000 Rs
+	3. if trade day is Thursday and NSE time is 1500 hrs

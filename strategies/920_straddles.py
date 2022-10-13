@@ -25,7 +25,10 @@ class Straddles_920:
             instrument_list = [{"strike": atm_strike, "option_type": "CE"}, {"strike": atm_strike, "option_type": "PE"}]
             self.symbol = trading.Symbol(instrument_list,self.params)
 
-        self.trade_instrument = self.symbol.get_token()
+        self.trade_instrument_details = self.symbol.get_token_details()
+        self.trade_instrument = []
+        for instrument in self.trade_instrument_details:
+             self.trade_instrument.append(instrument.get('token'))
 
         
     def generate_signal(self, data):
@@ -43,5 +46,6 @@ class Straddles_920:
         signal_dict["stop_loss"] = stop
         signal_dict["take_profit"] = take
         signal_dict["trade_instrument"] = self.trade_instrument
+        signal_dict["lot_size"] = self.trade_instrument_details[0].get('lot_size')
         return signal_dict
     
