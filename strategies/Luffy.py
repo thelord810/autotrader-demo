@@ -25,7 +25,7 @@ class Strangles:
         orders = []
 
         # Get current position
-        current_position = self.broker.get_positions(self.instrument)
+        current_position = self.broker.get_positions(self.trade_instruments)
 
         # Put entry strategy here
         signal = 0
