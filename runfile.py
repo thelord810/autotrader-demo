@@ -9,7 +9,7 @@ keys_config = {
     }
 }
 # Create a new instance of AutoTrader
-at.configure(show_plot=True, verbosity=1, notify=1, broker='virtual', feed='common', mode='continuous', allow_dancing_bears=True,
+at.configure(show_plot=True, verbosity=2, notify=1, broker='virtual', feed='common', mode='continuous', allow_dancing_bears=True,
              global_config=keys_config, update_interval='1S', req_liveprice=True, environment='paper')#Configure the instance
 # at.add_strategy('hk_ema_crossover')                     # Add the strategy by its configuration file prefix
 # at.backtest(start = '1/10/2021',             # Define the backtest settings
